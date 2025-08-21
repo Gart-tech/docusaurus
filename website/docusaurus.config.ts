@@ -210,9 +210,9 @@ export default async function createConfigAsync() {
             [defaultLocale]
           : isI18nStaging
           ? // Staging locales: https://docusaurus-i18n-staging.netlify.app/
-            [defaultLocale, 'ja']
+            [defaultLocale, 'en']
           : // Production locales
-            [defaultLocale, 'fr', 'pt-BR', 'ko', 'zh-CN'],
+            [defaultLocale, 'en'],
     },
     markdown: {
       format: 'detect',
