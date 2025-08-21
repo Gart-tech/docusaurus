@@ -159,7 +159,7 @@ function getLocalizedConfigValue(key: keyof typeof ConfigLocalized) {
 
 // By default, we don't want to run "git log" commands on i18n sites
 // This makes localized sites build much slower on Netlify
-// See also https://github.com/facebook/docusaurus/issues/11208
+// See also https://github.com/Gart-tech/docusaurus/issues/11208
 const showLastUpdate = process.env.DOCUSAURUS_CURRENT_LOCALE === defaultLocale;
 
 export default async function createConfigAsync() {
@@ -237,7 +237,7 @@ export default async function createConfigAsync() {
         let result = fileContent;
 
         // This fixes Crowdin bug altering MDX comments on i18n sites...
-        // https://github.com/facebook/docusaurus/pull/9220
+        // https://github.com/Gart-tech/docusaurus/pull/9220
         result = result.replaceAll('{/_', '{/*');
         result = result.replaceAll('_/}', '*/}');
 
@@ -291,7 +291,7 @@ export default async function createConfigAsync() {
           configureWebpack(_config, isServer) {
             // This optimization is expensive and only reduces by 3% the JS
             // Let's skip it for local and deploy preview builds
-            // See also https://github.com/facebook/docusaurus/discussions/11199
+            // See also https://github.com/Gart-tech/docusaurus/discussions/11199
             return {
               optimization: {
                 concatenateModules: isProductionDeployment ? !isServer : false,
@@ -492,7 +492,7 @@ export default async function createConfigAsync() {
               // We want users to submit updates to the upstream/next version!
               // Otherwise we risk losing the update on the next release.
               const nextVersionDocsDirPath = 'docs';
-              return `https://github.com/facebook/docusaurus/edit/main/website/${nextVersionDocsDirPath}/${docPath}`;
+              return `https://github.com/Gart-tech/docusaurus/edit/main/website/${nextVersionDocsDirPath}/${docPath}`;
             },
             admonitions: {
               keywords: ['my-custom-admonition'],
@@ -537,7 +537,7 @@ export default async function createConfigAsync() {
               if (locale !== defaultLocale) {
                 return `https://crowdin.com/project/docusaurus-v2/${locale}`;
               }
-              return `https://github.com/facebook/docusaurus/edit/main/website/${blogDirPath}/${blogPath}`;
+              return `https://github.com/Gart-tech/docusaurus/edit/main/website/${blogDirPath}/${blogPath}`;
             },
             remarkPlugins: [npm2yarn],
             postsPerPage: 5,
@@ -567,7 +567,7 @@ export default async function createConfigAsync() {
               if (locale !== defaultLocale) {
                 return `https://crowdin.com/project/docusaurus-v2/${locale}`;
               }
-              return `https://github.com/facebook/docusaurus/edit/main/website/src/pages/${pagesPath}`;
+              return `https://github.com/Gart-tech/docusaurus/edit/main/website/src/pages/${pagesPath}`;
             },
             showLastUpdateAuthor: showLastUpdate,
             showLastUpdateTime: showLastUpdate,
@@ -751,7 +751,7 @@ export default async function createConfigAsync() {
                 value: '<hr style="margin: 0.3rem 0;">',
               },
               {
-                href: 'https://github.com/facebook/docusaurus/issues/3526',
+                href: 'https://github.com/Gart-tech/docusaurus/issues/3526',
                 label: 'Help Us Translate',
               },
             ],
