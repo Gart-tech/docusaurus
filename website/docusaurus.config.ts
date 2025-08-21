@@ -757,7 +757,7 @@ export default async function createConfigAsync() {
             ],
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Gart-tech/docusaurus',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -822,7 +822,7 @@ export default async function createConfigAsync() {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Gart-tech/docusaurus/',
               },
               {
                 label: 'X',
